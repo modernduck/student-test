@@ -1,0 +1,17 @@
+<table class="table table-striped">
+	<thead>
+		<th>Name</th>
+		<th>Grade</th>
+		<th>Class <a href="" ng-click="sortToggle()">(Sort)</a></th>
+		<th>Phone</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="student in students track by $index ">
+			<td><a href="#/students/{{$index}}">{{student.name}}</a></td>
+			<td>{{student.grade}}</td>
+			<td>{{student.class}}</td>
+			<td>{{student.phone | phone}}</td>
+		</tr>
+	</tbody>
+
+</table>

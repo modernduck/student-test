@@ -1,0 +1,17 @@
+<a class="btn btn-inverse btn-raised" ui-sref="home">Back</a>
+<form ng-submit="save()">
+	<input required type="text" placeholder="Name" ng-model="student.name" class="form-control">
+	<!--<input type="text" placeholder="Grade" ng-model="student.grade" class="form-control">-->
+	<select required ng-model="student.grade" class="form-control" >
+		 <option value="" disabled selected>Grade</option>
+		<option>A</option>
+		<option>B</option>
+		<option>C</option>
+		<option>D</option>
+		<option>F</option>
+	</select>
+	<input required type="text" placeholder="Class" ng-model="student.class" class="form-control">
+	<phone-number ng-model="student.phone" ></phone-number>
+	
+	<input type="submit" value="Save" class="btn btn-primary btn-raised">
+</form>

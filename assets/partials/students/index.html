@@ -1,0 +1,15 @@
+<table class="table table-striped">
+	<thead>
+		<th>Name</th>
+		<th>Grade</th>
+		<th>Class <a href="" ng-click="sort()">Sort</a></th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="student in students ">
+			<td>{{student.name}}</td>
+			<td>{{student.grade}}</td>
+			<td>{{student.class}}</td>
+		</tr>
+	</tbody>
+
+</table>

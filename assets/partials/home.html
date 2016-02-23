@@ -1,2 +1,17 @@
-<h2>Hello</h2>
-{{test}}
+<h2>Micro Student Report</h2>
+
+<!--<phone-number ng-model="phone"></phone-number>{{phone}}-->
+<div class="row">
+	<div class="col-md-6">
+		<h4>Number of students for each Grade</h4>
+		<canvas id="bar" class="chart chart-bar" chart-data="graph.data" chart-labels="graph.labels"> chart-series="series"</canvas>
+
+	</div>
+	<div class="col-md-6">
+		<h4>Students<a ui-sref="student.create">(New)</a></h4>
+		<students students="students"></students>
+	</div>
+
+</div>
+
+<!--<a ui-sref="student.index">Students</a>-->
