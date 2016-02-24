@@ -1,4 +1,4 @@
-<a class="btn btn-inverse btn-raised" ui-sref="home">Back</a>
+<a class="btn btn-inverse btn-raised" ui-sref="app.home">Back</a>
 <form ng-submit="save()">
 	<input required type="text" placeholder="Name" ng-model="student.name" class="form-control">
 	<!--<input type="text" placeholder="Grade" ng-model="student.grade" class="form-control">-->
@@ -14,4 +14,5 @@
 	<phone-number ng-model="student.phone" ></phone-number>
 	
 	<input type="submit" value="Save" class="btn btn-primary btn-raised">
+	<p class="ps">PS. Phone number will format when unfocus.</p>
 </form>

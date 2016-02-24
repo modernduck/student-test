@@ -7,7 +7,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="student in students track by $index ">
-			<td><a href="#/students/{{$index}}">{{student.name}}</a></td>
+			<td><a href="#/{{$index}}">{{student.name}}</a></td>
 			<td>{{student.grade}}</td>
 			<td>{{student.class}}</td>
 			<td>{{student.phone | phone}}</td>

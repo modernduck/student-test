@@ -14,15 +14,25 @@ angular.module("dataProvider",[])
 				{ name : "Brian", grade : "A", class : "Geography" }
 			]
 		return {
-			query : function()
+			query : function(index)
 			{
 				if(angular.isUndefined(localStorage[LOCAL_KEY]))
 				{
-					console.log("dafaq")
+					
 					localStorage[LOCAL_KEY] = JSON.stringify(_students);
+				}
+
+				if(!angular.isUndefined(index))
+				{
+				
+					var students = JSON.parse(localStorage[LOCAL_KEY])
+					students =students.filter(function(item){
+					
+						return item.name == students[index].name
+					})
+					return students;
 				}else
-					console.log('load from local?')
-				return JSON.parse(localStorage[LOCAL_KEY])
+					return JSON.parse(localStorage[LOCAL_KEY])
 			},
 			get : function (index)
 			{
@@ -44,7 +54,10 @@ angular.module("dataProvider",[])
 				var students = this.query();
 				students.push(student)
 				return this.updateAll(students);
-			}	
+			},
+			reset : function(){
+				localStorage[LOCAL_KEY] = JSON.stringify(_students);
+			}
 			
 		}
 	})

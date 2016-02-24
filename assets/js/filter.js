@@ -7,6 +7,7 @@ angular.module("studentFilter",[])
 			var phoneNumber = phoneNumber.toString().trim().replace(/^\+/, '');
 
 			var country, city, number;
+			
 			switch(phoneNumber.length)
 			{
 				case 10: //+1PPP####### => C (PPP) ###-####
@@ -18,17 +19,20 @@ angular.module("studentFilter",[])
 					country = phoneNumber[0];
 					city = phoneNumber.slice(1,4);
 					number = phoneNumber.slice(4);
+					break;
 				case 12:
 					country = phoneNumber.slice(0, 3);
 					city = phoneNumber.slice(3, 5);
 					number = phoneNumber.slice(5);
+					break;
 				default:
 					return phoneNumber;
 			}
-
+			
 			if(country == 1)
 				country = "";
 			var number = number.slice(0,3) + "-" + number.slice(3);
+
 			return (country + " (" + city + ") "  + number).trim();
 
 		}

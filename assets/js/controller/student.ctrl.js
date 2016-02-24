@@ -1,26 +1,15 @@
 angular.module("ctrl.student", ['dataProvider'])
-.controller("StudentCreateCtrl", ["$scope" , "$filter", "Student", "$stateParams", "$state", function ($scope, $filter, Student, $stateParams, $state) {
-	$scope.save = function()
-	{
-		Student.create($scope.student);
-		$state.go('home');
-	}
-	$scope.back = function()
-	{
-		$state.go("^")
-	}
-	// body...
-}])
 .controller("StudentEditCtrl", ["$scope" , "$stateParams", "Student", "$state", function ($scope, $stateParams, Student, $state) {
+	console.log("yo")
 	$scope.student = Student.get($stateParams.id)
+	console.log($scope.student)
 	$scope.save = function()
 	{
 		Student.update($stateParams.id, $scope.student);
-		$state.go('home');
+		$state.go('app.home');
 	}
-	$scope.back = function()
-	{
-		$state.go("^")
-	}
-	// body...
+	
+}])
+.controller("StudentCtrl", ["$scope", "$stateParams", "Student", function ($scope, $stateParams, Student){
+	$scope.students = Student.query($stateParams.id)
 }])
