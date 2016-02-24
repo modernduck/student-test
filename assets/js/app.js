@@ -75,55 +75,7 @@ angular.module("student", ['ui.router', 'oc.lazyLoad', 'studentDirective', 'ngAn
 
 				})
 
-				/*.state('app.student', {
-					abstract:true,
-					url:"/students",
-					views: {
-						"tabledata" : {
-							template: '<div ui-view></div>',
-						},
-						"graph":{
-							templateUrl: 'assets/partials/preview.html',
-							controller: 'MainCtrl'
-						}
-					},
-					//templateUrl:'assets/partials/layout.html',
-					resolve: {
-						load: function ($ocLazyLoad) {
-							
-							return $ocLazyLoad.load([
-								{ name : 'ctrl.student', files: ['assets/js/controller/student.ctrl.js']}
-
-							])
-						}
-					}
-				})
-				.state('student.index', {
-					url:"/index",
-					templateUrl: "assets/partials/students/index.html",
-					controller: "StudentCtrl",
-
-				})
-				.state('app.student.create', {
-						url:"/create",
-						views:{
-							"graph":{
-
-							}
-						},
-						templateUrl: "assets/partials/students/form.html",
-						controller: "StudentCreateCtrl"
-						
-				})
-				.state('app.student.edit', {
-						url:"/:id",
-						
-						templateUrl: "assets/partials/students/form.html",
-						controller: "StudentEditCtrl"
-						
-						
-						
-				})*/
+				
 				
 
 
